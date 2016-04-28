@@ -1,0 +1,133 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$calendar-ico-name: 'calendar-ico';
+$calendar-ico-x: 0px;
+$calendar-ico-y: 0px;
+$calendar-ico-offset-x: 0px;
+$calendar-ico-offset-y: 0px;
+$calendar-ico-width: 19px;
+$calendar-ico-height: 16px;
+$calendar-ico-total-width: 40px;
+$calendar-ico-total-height: 293px;
+$calendar-ico-image: '../pic/design/sprite.png';
+$calendar-ico: (0px, 0px, 0px, 0px, 19px, 16px, 40px, 293px, '../pic/design/sprite.png', 'calendar-ico', );
+$mess-name: 'mess';
+$mess-x: 0px;
+$mess-y: 36px;
+$mess-offset-x: 0px;
+$mess-offset-y: -36px;
+$mess-width: 40px;
+$mess-height: 28px;
+$mess-total-width: 40px;
+$mess-total-height: 293px;
+$mess-image: '../pic/design/sprite.png';
+$mess: (0px, 36px, 0px, -36px, 40px, 28px, 40px, 293px, '../pic/design/sprite.png', 'mess', );
+$slid-next-name: 'slid-next';
+$slid-next-x: 0px;
+$slid-next-y: 84px;
+$slid-next-offset-x: 0px;
+$slid-next-offset-y: -84px;
+$slid-next-width: 40px;
+$slid-next-height: 74px;
+$slid-next-total-width: 40px;
+$slid-next-total-height: 293px;
+$slid-next-image: '../pic/design/sprite.png';
+$slid-next: (0px, 84px, 0px, -84px, 40px, 74px, 40px, 293px, '../pic/design/sprite.png', 'slid-next', );
+$slid-prev-name: 'slid-prev';
+$slid-prev-x: 0px;
+$slid-prev-y: 178px;
+$slid-prev-offset-x: 0px;
+$slid-prev-offset-y: -178px;
+$slid-prev-width: 40px;
+$slid-prev-height: 74px;
+$slid-prev-total-width: 40px;
+$slid-prev-total-height: 293px;
+$slid-prev-image: '../pic/design/sprite.png';
+$slid-prev: (0px, 178px, 0px, -178px, 40px, 74px, 40px, 293px, '../pic/design/sprite.png', 'slid-prev', );
+$time-name: 'time';
+$time-x: 0px;
+$time-y: 272px;
+$time-offset-x: 0px;
+$time-offset-y: -272px;
+$time-width: 22px;
+$time-height: 21px;
+$time-total-width: 40px;
+$time-total-height: 293px;
+$time-image: '../pic/design/sprite.png';
+$time: (0px, 272px, 0px, -272px, 22px, 21px, 40px, 293px, '../pic/design/sprite.png', 'time', );
+$spritesheet-width: 40px;
+$spritesheet-height: 293px;
+$spritesheet-image: '../pic/design/sprite.png';
+$spritesheet-sprites: ($calendar-ico, $mess, $slid-next, $slid-prev, $time, );
+$spritesheet: (40px, 293px, '../pic/design/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+
+//////////////////////////////////////////////////////
+
+
+//   Font Stacks  НАБОРЫ БАЗОВЫХ ШРИФТОВ bourbon
+
+
+
+@font-face {
+  font-family: 'HelveticaNeueBdCond';
+  src: url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-BdCond.eot');
+  src: url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-BdCond.eot?#iefix') format('embedded-opentype'),
+  url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-BdCond.woff') format('woff'),
+  url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-BdCond.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCond';
+  src: url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-Cond.eot');
+  src: url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-Cond.eot?#iefix') format('embedded-opentype'),
+  url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-Cond.woff') format('woff'),
+  url('../flib/HelveticaNeueCyrCondensed/HelveticaNeueLTCYR-Cond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../flib/BebasNeue/BebasNeue.eot');
+  src: url('../flib/BebasNeue/BebasNeue.eot?#iefix') format('embedded-opentype'),
+  url('../flib/BebasNeue/BebasNeue.woff2') format('woff2'),
+  url('../flib/BebasNeue/BebasNeue.woff') format('woff'),
+  url('../flib/BebasNeue/BebasNeue.ttf') format('truetype'),
+  url('../flib/BebasNeue/BebasNeue.svg#BebasNeue') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+$BebasNeue: 'BebasNeue';
+$HelvetNeueCond: 'HelveticaNeueCond';
+$HelvetNeueBdCond: 'HelveticaNeueBdCond';
+
+body{
+  font-family: $HelvetNeueCond;
+}
