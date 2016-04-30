@@ -161,6 +161,7 @@ gulp.task('fonts:build', function() {
 gulp.task('jscripts:build', function() {
     gulp.src(path.src.js)
         .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
 });
 
 
@@ -184,7 +185,7 @@ gulp.task('watch', function(){
         gulp.start('style:build');
     });
     watch([path.watch.js], function(event, cb) {
-        gulp.start('js:build');
+        gulp.start('jscripts:build');
     });
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
