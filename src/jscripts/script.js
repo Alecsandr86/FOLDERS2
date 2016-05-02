@@ -57,7 +57,22 @@ $(document).ready(function(){
     $('.slid-next,.slid-prev').bind("click", function () {
         slidTime();
     });
-   
+
+
+    $('.slid-day-night').bxSlider({
+        pager: false,
+        //auto:true,
+        //pause:"3000",
+        //adaptiveHeight: true,
+        nextText:"<i class='slid-next'></i>",
+        prevText:"<i class='slid-prev'></i>",
+     
+    });
+    
+    
+    $(".button-slid a").bind("click", function () {
+        $(this).toggleClass("active")
+    })
 
 
     // function showhide() {
@@ -75,12 +90,12 @@ $(document).ready(function(){
     $('.headers')
         .waypoint(function(direction) {
             if (direction === 'down') {
-                $('.fix-nav-menu').animate({
+                $('.fix ').animate({
                     "top":"0"
                 },700)
             }
             else {
-                $('.fix-nav-menu').animate({
+                $('.fix').animate({
                     "top":"-100%"
                 },700)
             }

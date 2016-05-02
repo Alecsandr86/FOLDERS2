@@ -6,15 +6,21 @@
 //hover спрайта
 
 
-//.icon {
-//  @include sprite($icon);
-//  &:hover {
-//    @include sprite($icon-hover);
-//  }
-//}
-//.nav-mobail{
-//  @include sprite($nav-mobail);
-//  &:hover {
-//    @include sprite($nav-mobail-hover);
-//  }
-//}
+.day-night {
+  @include sprite($day-night);
+  &.active {
+    @include sprite($day-night-hover);
+  }
+}
+.parade{
+  @include sprite($parade);
+  &.active {
+    @include sprite($parade-hover);
+  }
+}
+.beside{
+  @include sprite($beside);
+  &.active {
+    @include sprite($beside-hover);
+  }
+}
