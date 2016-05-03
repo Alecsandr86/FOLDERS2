@@ -763,6 +763,268 @@ header{
 }
 
 
+.choose-apartment{
+  background: #e9dfd2 url('../pic/design/choose-apartment-bg.png') 100% 0 no-repeat;
+  h2{
+    padding-bottom: 25px;
+  }
+}
+
+.apar-box{
+  img{
+    width: 100%;
+  }
+}
+
+.wrapper-min{
+  max-width: 665px;
+  margin: 0 auto;
+}
+
+
+.selection-parameters{
+  background: #e9dfd2 url('../pic/design/selec-param.png') 0 0 no-repeat;
+  h4{
+   
+  }
+}
+
+.h4{
+  color: #5c4e30;
+  font-size: rem(42);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: $BebasNeue;
+  line-height: 47px;
+  .red{
+    display: inline-block;
+    width: 33px;
+    height: 6px;
+    background-color: #a9446a;
+  }
+}
+
+
+
+// RangeSlider
+.item-slid{
+  padding: 26px 0 0;
+  p{
+    text-align: center;
+    color: #2b2839;
+    margin: 25px 0 0;
+    font-size: rem(20);
+  }
+}
+
+.irs-line{
+  background: url('../pic/design/irs-line-bg.png') 0 50% repeat-x;
+  top: 54px;
+}
+
+.irs {
+  height: 58px;
+  position: relative;
+  display: block;
+ 
+}
+.irs-bar{
+  background-color: #a69373;
+  height: 11px;
+  top: 55px;
+}
+.irs-slider {
+  width: 40px;
+  top: 53px;
+  background: url('../pic/design/irs-slider.png') 50% 0 no-repeat!important;
+  
+}
+.irs-line-left{
+  background: url('../pic/design/irs-line-bg.png') 0 50% repeat-x;
+}
+.irs-line-mid{
+  background: url('../pic/design/irs-line-bg.png') 0 50% repeat-x;
+}
+.irs-line-right{
+  background: url('../pic/design/irs-line-bg.png') 0 50% repeat-x;
+}
+
+
+.irs-from, .irs-to, .irs-single {
+  color: #f5f2eb;
+  font-family: $BebasNeue;
+  font-size: rem(36);
+  text-align: center;
+  background: url('../pic/design/irs-fr-to.png') 0 0 no-repeat;
+  width: 40px;
+  height: 48px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  &:after{
+    display: none;
+  }
+  
+}
+
+
+// \RangeSlider\
+
+
+.rub{
+  position: relative;
+  display: inline-block;
+  color: #2b2839;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    height: 1px;
+    background-color: #2b2839;
+  }
+}
+
+
+
+.tables-layout{
+  padding: 22px 0 40px;
+  max-width: 665px;
+  margin: 0 auto;
+  
+  p{
+    padding-bottom: 10px;
+  }
+  table{
+    tr {
+      background-color: #ddd0bf;
+      color: #3f0b1f;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      &:nth-child(2n+1) {
+        background-color: #c8b5ae;
+      }
+      &:hover{
+        background-color: #c8a8a8;
+      }
+    }
+    td{
+      width: 85px;
+      padding: 9px 0 9px 10px;
+      border-right: 1px solid #e9dfd2;
+      border-top: 1px solid #e9dfd2;
+    }
+  }
+  .table-head{
+    &.table-fix{
+      position: fixed;
+      top: 58px;
+      left: 0;
+      width: 100%;
+    }
+  }
+  .header-table{
+    height: 130px;
+    max-width: 665px;
+    margin: 0 auto;
+    
+    tr{
+      background-color: #6b1838!important;
+    }
+    th{
+      font-weight: normal;
+      position: relative;
+      height: 112px;
+      width: 84px;
+      padding: 114px 0 5px;
+      border-right: 1px solid #e9dfd2;
+      span{
+        display: inline-block;
+        text-transform: uppercase;
+        color: #ebe3d8;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        transform-origin: left bottom 0;
+        position: absolute;
+        bottom: 10px;
+        left: 100%;
+        width: 130px;
+        height: 70px;
+        text-align: left;
+        font-weight: normal;
+      }
+    }
+  }
+}
+.caption{
+  color: #2b2839;
+  font-size: rem(20);
+}
+
+.table-sort{
+  display: inline-block;
+  margin: 0 0 0 35px;
+  position: relative;
+  z-index: 9;
+}
+
+.parking-spaces-box{
+  position: relative;
+  margin: 20px 0 20px;
+  height: 700px;
+}
+.slidbutt{
+  text-decoration: none;
+  font-size: rem(33);
+  text-align: center;
+  display: block;
+  line-height: 33px;
+  &.active{
+    color: #fbf7ee;
+  }
+  span{
+    display: block;
+    font-size: rem(20);
+    line-height: 10px;
+  }
+}
+
+#slider-spaces-pager{
+  position: absolute;
+  top: 33px;
+  left: 0;
+  z-index: 99;
+}
+
+.zumm{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  text-align: right;
+  padding: 25px 2px;
+  a{
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 //************ ПЛАВНАЯ АНИМАЦИЯ ***********//
 //@include transition(all 0.5s $ease-out-cubic);
 

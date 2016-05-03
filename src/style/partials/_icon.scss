@@ -24,3 +24,10 @@
     @include sprite($beside-hover);
   }
 }
+
+.slidbutt{
+  @include sprite($slidbutt);
+  &.active {
+    @include sprite($slidbutt-hover);
+  }
+}
