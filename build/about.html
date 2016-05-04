@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/ion.rangeSlider.css">
     <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -41,10 +42,32 @@
 <div class="main-wrapper">
     <div class="content">
        <div class="wr-slid">
-           <ul class="slid-day-night">
-               <li><img src="pic/design/slid-two-img-1.jpg" alt="img"></li>
-               <li><img src="pic/design/slid-two-img-2.jpg" alt="img"></li>
-           </ul>
+           <div class="wrapper-ones slid-wr">
+               <ul class="ones">
+                   <li><img src="pic/design/slid-two-img-1.jpg" alt="img"></li>
+                   <li><img src="pic/design/slid-two-img-1.jpg" alt="img"></li>
+               </ul>
+           </div>
+           <div class="wrapper-day-night slid-wr two-slid">
+               <ul class="slid-day-night">
+                   <li><img src="pic/design/slid-two-img-2.jpg" alt="img"></li>
+                   <li><img src="pic/design/slid-two-img-1.jpg" alt="img"></li>
+               </ul>
+           </div>
+           <div class="wrapper-parade slid-wr two-slid">
+               <ul class="slid-parade">
+                   <li><img src="pic/design/slid-two-img-2.jpg" alt="img"></li>
+                   <li><img src="pic/design/slid-two-img-2.jpg" alt="img"></li>
+               </ul>
+           </div>
+           <div class="wrapper-beside slid-wr two-slid">
+               <ul class="slid-beside">
+                   <li><img src="pic/design/slid-two-img-3.jpg" alt="img"></li>
+                   <li><img src="pic/design/slid-two-img-3.jpg" alt="img"></li>
+               </ul>
+           </div>
+           
+           
            <div class="button-slid">
                <ul>
                    <li>
@@ -93,6 +116,7 @@
                     <h3 class="right">Актуальные <br>
                         архитектурные тренды
                     </h3>
+                    <div class="cr"></div>
                     <p>
                         Новый комплекс состоит из двух корпусов, каждый - по 17 
                         этажей. Эти здания созданы по оригинальному проекту одного
@@ -112,6 +136,7 @@
                         Большой выбор <br>
                         квартир от 38 до 120 м <sup>2</sup>
                     </h3>
+                    <div class="cr"></div>
                     <p>
                         В зависимости от пожеланий, покупатели могут 
                         приобрести квартиры свободной планировки площадью 
@@ -133,6 +158,7 @@
                         Лифты Otis серии <br>
                         GeN2 Premier
                     </h3>
+                    <div class="cr"></div>
                     <p>
                         В ЖК «Лефорт» будут установлены современные лифты Otis серии GeN2
                         Premier грузоподъемностью 450 и 1000 кг. Эти лифты заслуженно считаются 
@@ -148,6 +174,7 @@
                         Двухуровневая <br>
                         подземная стоянка
                     </h3>
+                    <div class="cr"></div>
                     <p>
                         В условиях ограниченного пространства и расширения зон платных парковок сейчас 
                         становится очень актуальным вопрос, где оставить свой автомобиль. В проекте ЖК 
@@ -170,6 +197,7 @@
                         Боксы для хранения <br>
                         хозяйственных вещей
                     </h3>
+                    <div class="cr"></div>
                     <p>
                         На территории комплекса есть специальные боксы, которые идеально подходят для 
                         хранения вещей. Благодаря специальной аппаратуре, боксы постоянно находятся под
@@ -187,6 +215,7 @@
                         Комплекс внеклассного <br>
                         образования
                     </h3>
+                    <div class="cr"></div>
                     <p>
                         Первые этажи корпусов в ЖК «Лефорт» с отдельным входом будут 
                         задействованы под размещение классов дополнительного образования.
@@ -242,40 +271,28 @@
             </div>
         </div>
     </div>
-    
-</div>
-
-
-        <footer> 
-            <div class="main-wrapper">
-                <p class="offer">
-                    Представленная информация не является публичной офертой
-                </p>
-            </div>
-            
-        </footer>
-        
+    <div class="popap">
         <div class="nav-menu fix">
-                <div class="main-wrapper both">
-                   <div class="hamburger hamburger--collapse left">
-                       <div class="hamburger-box">
-                                   <div class="hamburger-inner"></div>
-                           </div>
-                   </div>
-                   <ul class="nav-fix">
-                      <li><a href="javascript: void(0);">О проекте</a></li>
-                      <li><a href="javascript: void(0);">расположение</a></li>
-                      <li><a href="javascript: void(0);">генплан</a></li>
-                      <li><a href="javascript: void(0);"><img src="pic/design/logo-fix.png" alt="logo"></a></li>
-                      <li><a href="javascript: void(0);">квартиры</a></li>
-                      <li><a href="javascript: void(0);">ипотека</a></li>
-                      <li><a href="javascript: void(0);">контакты</a></li>
-                   </ul>
-                   <a href="javascript: void(0);">
-                       <i class="mess right"></i>
-                    </a>     
+            <div class="main-wrapper both">
+                <div class="hamburger hamburger--collapse left">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
                 </div>
-           
+                <ul class="nav-fix">
+                    <li><a href="javascript: void(0);">О проекте</a></li>
+                    <li><a href="javascript: void(0);">расположение</a></li>
+                    <li><a href="javascript: void(0);">генплан</a></li>
+                    <li><a href="javascript: void(0);"><img src="pic/design/logo-fix.png" alt="logo"></a></li>
+                    <li><a href="javascript: void(0);">квартиры</a></li>
+                    <li><a href="javascript: void(0);">ипотека</a></li>
+                    <li><a href="javascript: void(0);">контакты</a></li>
+                </ul>
+                <a href="javascript: void(0);">
+                    <i class="mess right"></i>
+                </a>
+            </div>
+    
         </div>
         <div class="menu-open">
             <div class="hamburger hamburger--collapse">
@@ -300,11 +317,24 @@
                 <li><a href="javascript: void(0);"><span>Участики строительства</span></a></li>
                 <li><a href="javascript: void(0);"><span>Контакты</span></a></li>
             </ul>
-        </div>
-        <script src="flib/jquery.min.js"></script>
-        <script src="flib/jquery.bxslider.min.js"></script>
-        <script src="flib/jquery.waypoints.min.js"></script>
-        <script src="flib/ion.rangeSlider.min.js"></script>
+        </div>  
+    </div>
+</div>
+
+
+        <footer> 
+            <div class="main-wrapper">
+                <p class="offer">
+                    Представленная информация не является публичной офертой
+                </p>
+            </div>
+            
+        </footer>
+        
+        <script src="jscripts/jquery.min.js"></script>
+        <script src="jscripts/jquery.bxslider.min.js"></script>
+        <script src="jscripts/jquery.waypoints.min.js"></script>
+        <script src="jscripts/ion.rangeSlider.min.js"></script>
         <script src="jscripts/script.js"></script>
 
     </body>

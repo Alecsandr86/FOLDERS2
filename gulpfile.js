@@ -21,14 +21,16 @@ var path = {
         js: 'build/jscripts/',
         css: 'build/css/',
         img: 'build/pic/design/',
-        fonts: 'build/flib/'
+        fonts: 'build/flib/',
+        jsfail:"build/jscripts/"
     },
     src: {
         html: 'src/*.html',
         js: 'src/jscripts/script.js',
         style: 'src/style/style.scss',
         img: 'src/pic/design/*.*',
-        fonts: 'src/flib/**/*.*'
+        fonts: 'src/flib/**/*.*',
+        jsfail:"src/jscripts/**.*"
     },
     watch: {
         html: 'src/**/*.html',
@@ -164,6 +166,11 @@ gulp.task('jscripts:build', function() {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('jsfail:build', function() {
+    gulp.src(path.src.jsfail)
+        .pipe(gulp.dest(path.build.jsfail))
+});
+
 
 
 gulp.task('build', [
@@ -172,6 +179,7 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'image:build',
+    "jsfail:build"
 
 
 

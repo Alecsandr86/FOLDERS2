@@ -1,59 +1,36 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>INDEX</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-<header>
-    <div class="nav-menu menu-fix">
-        <div class="main-wrapper both">
-            <div class="hamburger hamburger--collapse left">
-                <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
-                </div>
-            </div>
-            <ul class="nav-fix">
-                <li><a href="javascript: void(0);">О проекте</a></li>
-                <li><a href="javascript: void(0);">расположение</a></li>
-                <li><a href="javascript: void(0);">генплан</a></li>
-                <li><a href="javascript: void(0);"><img src="pic/design/logo-fix.png" alt="logo"></a></li>
-                <li><a href="javascript: void(0);">квартиры</a></li>
-                <li><a href="javascript: void(0);">ипотека</a></li>
-                <li><a href="javascript: void(0);">контакты</a></li>
-            </ul>
-            <a href="javascript: void(0);">
-                <i class="mess right"></i>
-            </a>
-        </div>
-
-    </div>
-</header>
+//= template/head.html
+//= template/nav.html
 
 <div class="main-wrapper">
     <div class="content">
-       <div class="choose-apartment">
+       <div class="selection-parameters">
            <div class="wrapper-min">
                <h2 class="h2">
                    <span class="red"></span> <br>
-                   Выбор квартиры
+                   машиноместа
                </h2>
-           </div>
-           <div class="apar-box">
-               <img src="pic/design/arent.jpg" alt="img">
-           </div>
-       </div>
-       <div class="selection-parameters">
-           <div class="wrapper-min">
+               <div class="parking-spaces-box both">
+
+                   <ul class="slider-spaces">
+                       <li><img src="pic/design/slider-spaces-1.jpg" /></li>
+                       <li><img src="pic/design/slider-spaces-1.jpg" /></li>
+                   </ul>
+
+                   <div id="slider-spaces-pager">
+                       <a data-slide-index="0" class="slidbutt" href="javascript: void(0);">
+                           -1
+                           <span>этаж</span>
+                       </a>
+                       <a data-slide-index="1" class="slidbutt"  href="javascript: void(0);">
+                           -2
+                           <span>этаж</span>
+                       </a>
+                   </div>
+                   <div class="zumm">
+                       <a href="javascript: void(0);" class="zum-plus"></a>
+                       <a href="javascript: void(0);" class="zum-minus"></a>
+                   </div>
+               </div>
                <h4 class="h4">
                    <span class="red"></span> <br>
                    подбор по параметрам
@@ -301,74 +278,13 @@
                    </table>
                </div>
            </div>
-         
        </div>
     </div>
-    <div class="popap">
-        <div class="nav-menu fix">
-            <div class="main-wrapper both">
-                <div class="hamburger hamburger--collapse left">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
-                </div>
-                <ul class="nav-fix">
-                    <li><a href="javascript: void(0);">О проекте</a></li>
-                    <li><a href="javascript: void(0);">расположение</a></li>
-                    <li><a href="javascript: void(0);">генплан</a></li>
-                    <li><a href="javascript: void(0);"><img src="pic/design/logo-fix.png" alt="logo"></a></li>
-                    <li><a href="javascript: void(0);">квартиры</a></li>
-                    <li><a href="javascript: void(0);">ипотека</a></li>
-                    <li><a href="javascript: void(0);">контакты</a></li>
-                </ul>
-                <a href="javascript: void(0);">
-                    <i class="mess right"></i>
-                </a>
-            </div>
-    
-        </div>
-        <div class="menu-open">
-            <div class="hamburger hamburger--collapse">
-                <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
-                </div>
-            </div>
-            <ul>
-                <li><a href="javascript: void(0);"><span>Главная</span></a></li>
-                <li><a href="javascript: void(0);"><span>О проекте</span></a></li>
-                <li><a href="javascript: void(0);"><span>Расположение</span></a></li>
-                <li><a href="javascript: void(0);"><span>Инфраструктура</span></a></li>
-                <li><a href="javascript: void(0);"><span>Генплан</span></a></li>
-                <li><a href="javascript: void(0);"><span>Квартиры</span></a></li>
-                <li><a href="javascript: void(0);"><span>Машиноместа</span></a></li>
-                <li><a href="javascript: void(0);"><span>Кладовки</span></a></li>
-                <li><a href="javascript: void(0);"><span>Ипотека</span></a></li>
-                <li><a href="javascript: void(0);"><span>Взаимозачет</span></a></li>
-                <li><a href="javascript: void(0);"><span>Ход строительства</span></a></li>
-                <li><a href="javascript: void(0);"><span>Документы</span></a></li>
-                <li><a href="javascript: void(0);"><span>Новости</span></a></li>
-                <li><a href="javascript: void(0);"><span>Участики строительства</span></a></li>
-                <li><a href="javascript: void(0);"><span>Контакты</span></a></li>
-            </ul>
-        </div>  
-    </div>
+    //= template/popap.html
 </div>
 
 
-        <footer> 
-            <div class="main-wrapper">
-                <p class="offer">
-                    Представленная информация не является публичной офертой
-                </p>
-            </div>
-            
-        </footer>
-        
-        <script src="jscripts/jquery.min.js"></script>
-        <script src="jscripts/jquery.bxslider.min.js"></script>
-        <script src="jscripts/jquery.waypoints.min.js"></script>
-        <script src="jscripts/ion.rangeSlider.min.js"></script>
-        <script src="jscripts/script.js"></script>
 
-    </body>
-</html>
+//= template/footer.html
+
+

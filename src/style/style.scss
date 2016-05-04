@@ -7,7 +7,9 @@
 /////////////////////////////////////
 
 .main-wrapper{
-  width: 768px;
+  max-width: 1024px;
+  min-width: 768px;
+  //max-width: 768px;
   margin: 0 auto;
 }
 
@@ -125,7 +127,7 @@ button {
     color: #8e6a4f;
     text-decoration: none;
     border-bottom: 1px dashed #8e6a4f;
-    line-height: 97px;
+    line-height: 98px;
     &:hover{
       border-bottom-color: transparent; 
     }
@@ -197,6 +199,7 @@ button {
     text-decoration: none;
     display: inline-block;
     border-bottom: 2px solid #FFFFFF;
+    font-family: $BebasNeue;
     //&:hover{
     //  border-bottom-color: transparent;
     //}
@@ -213,7 +216,7 @@ button {
   width: 32%;
   padding: 0 0 0 53px;
   background: #f8f5f1 url('../pic/design/left-article-bg.png') 0 100% no-repeat;
-  min-height: 600px;
+  min-height: 603px;
   .aderss{
     color: #ac9576;
     line-height: 22px;
@@ -264,6 +267,9 @@ button {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  i{
+    vertical-align: middle;
+  }
   &.col-ar-1{
     background-color: rgba(215,201,172,0.7);
   }
@@ -272,39 +278,51 @@ button {
     color: #FFFFFF; 
   }
 }
-.slider-box{
+.slider-box,
+.bxslider{
   width: 68%;
+  height: 603px;
+  overflow: hidden;
+  position: relative;
+  img{
+    width: 100%;
+    height: 597px;
+  }
 }
 .lin-top-slider{
-  //background: url('../pic/design/lin-slider-top.png') 0 0 no-repeat;
-  background-color: #a9446a;
+  background: #ad4787;
+  background: -moz-linear-gradient(left,  #ad4787 0%, #a9446a 100%);
+  background: -webkit-linear-gradient(left,  #ad4787 0%,#a9446a 100%);
+  background: linear-gradient(to right,  #ad4787 0%,#a9446a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad4787', endColorstr='#a9446a',GradientType=1 );
+
   height: 8px;
   width: 100%;
   display: block;
+  overflow: hidden;
   span{
     display: block;
     height: 8px;
     width: 0%;
-    background-color: #fddfd5;
+    //background-color: #fddfd5;
+    background: #fddfd5;
+    background: -moz-linear-gradient(left,  #fddfd5 0%, #a9446a 100%);
+    background: -webkit-linear-gradient(left,  #fddfd5 0%,#a9446a 100%);
+    background: linear-gradient(to right,  #fddfd5 0%,#a9446a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fddfd5', endColorstr='#a9446a',GradientType=1 );
+    
   }
+  .bx-wrapper{
+    height: 592px;
+    //overflow: hidden;
+    position: relative;
+  }
+  
+  
+  
 }
 
-.bx-wrapper{
-  height: 592px;
-  //overflow: hidden;
-  position: relative;
-}
-.bx-controls{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: right;
-  padding: 36px 11px;
-  .bx-prev{
-    margin-right: 88px;
-  }
-}
+
 
 
 .business-class-box{
@@ -331,8 +349,8 @@ button {
     text-transform: uppercase;
     color: #d5c6a6;
     line-height: 20px;
-    font-size: rem(16);
     margin: 10px -5px 10px 0;
+    font-family: $BebasNeue;
   }
   &.colors-w{
     padding: 0 33px 0 19px;
@@ -358,7 +376,8 @@ button {
       font-size: rem(20);
     }
     .arows{
-      color: #FFFFFF; 
+      color: #FFFFFF;
+      
     }
   }
 }
@@ -401,17 +420,21 @@ button {
 }
 
 .h2{
+  font-family: $BebasNeue;
+  font-size: rem(65);
+  color: #624b3e;
+  text-transform: uppercase;
+  font-weight: normal;
   .red{
     display: inline-block;
     width: 40px;
     height: 8px;
     background-color: #a9446a;
   }
-  font-family: $BebasNeue;
-  font-size: rem(65);
-  color: #624b3e;
-  text-transform: uppercase;
-  font-weight: normal;
+  &.white{
+    color: #f8f3e7; 
+  }
+ 
 }
 
 
@@ -432,7 +455,50 @@ button {
 }
 
 
+.wrapper-utp{
+  position: relative;
+  z-index: 999;
+  width: 400px;
+  height: 410px;
+}
 
+.slid-utp{
+  z-index: 999999;
+  .slide{
+    width: 500px!important;
+    padding: 0 0 0 10px;
+  }
+}
+
+.slid-pages{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  padding: 36px 14px;
+  i{
+   
+  }
+  .slid-prev{
+    margin-right: 88px;
+  }
+}
+
+.bx-controls-direction{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  padding: 36px 14px;
+  i{
+
+  }
+  .bx-prev{
+    margin-right: 75px;
+  }
+}
 
 .tiles-box{
   
@@ -491,6 +557,7 @@ button {
     z-index: 3;
     text-decoration: none;
     padding: 56px 0;
+    font-family: $BebasNeue;
   }
 }
 
@@ -505,6 +572,7 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   padding: 24px 0 0 52px;
+  font-family: $BebasNeue;
   &:hover{
     color: #f2ece4;
   }
@@ -525,7 +593,7 @@ button {
   overflow: hidden;
   img{
     margin: 0 0 -4px;
-    height: 100%;
+    height: 194px;
     width: 100%;
   }
   a{
@@ -574,9 +642,9 @@ button {
   text-align: center;
   line-height: 46px;
   width: 250px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -585,6 +653,7 @@ button {
 .map{
   img{
     width: 100%;
+    margin-bottom: -4px;
   }
 }
 
@@ -639,18 +708,27 @@ header{
 
 .wr-slid{
   position: relative;
+  height: 479px;
   img{
     width: 100%;
     margin: 0 0 -5px;
+    height: 479px;
   }
-  .bx-wrapper{
+  .slid-wr{
     height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
   }
   .bx-controls{
     position: absolute;
     right: 0;
     bottom: 0;
     width: 100%;
+    z-index: 9;
   }
 }
 
@@ -658,6 +736,7 @@ header{
   position: absolute;
   left: 52px;
   bottom: 0;
+  z-index: 10;
   li{
     margin: 16px 0;
   }
@@ -724,7 +803,7 @@ header{
       color: #f2ece4;
       text-transform: uppercase;
       background-color: #974564;
-      min-width: 450px;
+      min-width: 115%;
       font-weight: normal;
       padding: 14px 0 14px 14px;
       margin: 60px 0 30px;
@@ -1012,6 +1091,73 @@ header{
   a{
     display: inline-block;
     margin: 0 10px;
+  }
+}
+
+
+
+.participants{
+  background: url('../pic/design/participants-bg.jpg') 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 950px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+
+
+
+.acordion{
+  .item{
+    margin: 24px 0;
+    background-color: lighten(#f4eddc, 5%);
+    &.active{
+      .but-acord{
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+       
+      }
+    }
+  }
+  .header-item{
+    background: #f4eddc url('../pic/design/acordion-item.png') 0 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 10px 0;
+    p{
+      text-transform: uppercase;
+      font-size: rem(20);
+      color: #6b5a32;
+      font-family: $BebasNeue;
+      margin: 2px 0 0;
+    }
+  }
+  
+  .content-item{
+    padding: 10px 20px;
+    color: #6b5a32;
+    display: none;
+  }
+  .footer-item{
+    background-color: #ddceaa;
+    height: 20px;
+    position: relative;
+    .but-acord{
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      margin: 0 0 0 -11px;
+      display: inline-block;
+      -webkit-transition: all 0.7s ease 0s;
+      -moz-transition: all 0.7s ease 0s;
+      -o-transition: all 0.7s ease 0s;
+      transition: all 0.7s ease 0s;
+    }
   }
 }
 
