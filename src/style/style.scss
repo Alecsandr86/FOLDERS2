@@ -7,9 +7,9 @@
 /////////////////////////////////////
 
 .main-wrapper{
-  max-width: 1024px;
-  min-width: 768px;
-  //max-width: 768px;
+  //max-width: 1024px;
+  //min-width: 768px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
@@ -254,6 +254,7 @@ button {
   p{
     color: #280a15;
     padding-bottom: 38px;
+    width: 180px;
   }
 }
 
@@ -354,16 +355,21 @@ button {
   }
   &.colors-w{
     padding: 0 33px 0 19px;
+    p{
+      font-family: $HelvetNeueCond;
+    }
     strong{
       display: inline-block;
       margin: 0 0 10px;
       a{
-        font-size: rem(36);
-        color: #FFFFFF;
+        font-size: rem(40);
+        color: #f0e8dd;
         font-family: $BebasNeue;
         font-weight: normal;
         text-decoration: none;
-        border-bottom: 2px solid #FFFFFF;
+        border-bottom: 2px solid #f0e8dd;
+        margin: -8px 0 0;
+        display: inline-block;
         &:hover{
           border-bottom-color: transparent;
         }
@@ -567,12 +573,13 @@ button {
   height: 194px;
   background-color: rgba(103, 20, 52, 0.8);
   display: block;
-  font-size: rem(48);
+  font-size: rem(50);
   color: #f2ece4;
   text-decoration: none;
   text-transform: uppercase;
   padding: 24px 0 0 52px;
   font-family: $BebasNeue;
+  letter-spacing: 1.5px;
   &:hover{
     color: #f2ece4;
   }
@@ -784,7 +791,7 @@ header{
 
 
 .advantages-box{
-  background-color: #f2ece4;
+  background-color: #faf7ef;
 }
 .item-adv{
   .img{
@@ -1162,6 +1169,299 @@ header{
 }
 
 
+.wrap-title{
+  padding: 10px 50px;
+}
+
+
+.mortgage{
+  background: url('../pic/design/mortgage.jpg') 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 948px;
+  position: relative;
+}
+
+
+.titles{
+  color: #FFFFFF;
+  width: 300px;
+}
+.wrapp-mort-supp{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.mortgage-support{
+  width: 93%;
+  background-color: rgba(246, 241, 230, 0.8);
+  padding: 0 52px 0 0;
+  
+  .h4{
+    padding: 0 0 18px 53px;
+  }
+}
+
+.mort-acord{
+  padding: 0 0 25px;
+  overflow: hidden;
+  .item{
+    margin-bottom: 24px;
+    .but-m{
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+      -webkit-transition: all 0.5s ease 0s;
+      -moz-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s;
+    }
+    &.active{
+      .but-m{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      //.content{
+      //  display: block;
+      //}
+    }
+    .head{
+      background-color: #6b1838;
+      padding: 5px 0 9px 53px;
+      cursor: pointer;
+      i{
+        vertical-align: middle;
+      }
+      strong{
+        vertical-align: middle;
+        color: #FFFFFF;
+        font-size: rem(32);
+        font-family: $BebasNeue;
+        font-weight: normal;
+        display: inline-block;
+        padding: 0 0 0 3px;
+      }
+      span{
+        color: #e4c286;
+      }
+    }
+    .content{
+      background-color: #fbf7ee;
+      padding: 13px 20px 5px 53px;
+      display: none;
+     
+      ul{
+        
+      }
+      li{
+        color: #2b2839;
+        margin: 5px 0;
+        font-size: rem(20);
+        sup{
+          color: #a9446a;
+        }
+      }
+      p{
+        font-size: rem(14);
+        color: #180c1c;
+      }
+    }
+  }
+ 
+}
+
+
+.master-plan{
+  background: #F0E6DC url('../pic/design/master-plan.jpg') 100% 0 no-repeat;
+  overflow: hidden;
+  .title{
+    width: 560px;
+    font-size: rem(20);
+    margin: 0;
+    padding: 25px 0;
+  }
+}
+.geo-map{
+  width: 100%;
+  margin-top: 26px;
+}
+
+.but-blic{
+  position: relative;
+  font-size: rem(20);
+  color: #6b1838;
+  display: inline-block;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  padding: 13px 13px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #dacdad;
+  height: 44px;
+  overflow: hidden;
+  span{
+    position: relative;
+    z-index: 2;
+    
+  }
+  &.gradient{
+    border: 1px solid #5d1430;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 180px;
+      height: 200px;
+      top: -150px;
+      left: -5px;
+      background-image: linear-gradient(131deg, #fddfd5 0%, #fff2ec 17%, #f9dbd1 36%, #d0a595 54%, #b28679 66%, #c58e7a 82%, #c8a19a 100%);
+      animation: background 2s infinite ease-in-out;
+    }
+  }
+
+}
+
+@keyframes background {
+  0%   { background-position: 0 0; }
+  50%  { background-position: 0 140px; }
+  100%   { background-position: 0 0; }
+}
+
+
+.location{
+  min-height: 950px;
+  width: 100%;
+  position: relative;
+  .location-map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .attractive-location{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 540px;
+    background-color: rgba(98, 19, 49,0.8);
+    color: #FFFFFF; 
+    .h2{
+      color: #f0e8dd;
+      .red{
+        background-color: #decfb9;
+      }
+    }
+    p{
+      margin: 0;
+      padding: 20px 0;
+      font-size: rem(20);
+    }
+  }
+}
+.content-attract{
+  width: 590px;
+}
+
+.contacts{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(233,223,210,0.9);
+  background-image: url('../pic/design/contacts-bg.png');
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+ 
+}
+.wr-content{
+  
+}
+.content-contacts{
+  width: 50%;
+  padding: 0 0 30px 53px;
+  font-size: rem(20);
+  h2{
+    padding: 0 0 15px;
+  }
+  p{
+    margin: 0;
+    padding: 10px 0;
+  }
+  ul{
+    padding: 0 0 20px;
+    li{
+      padding: 2px 0;
+    }
+  }
+  strong{
+    font-size: rem(32);
+    text-transform: uppercase;
+    color: #896c5c;
+    font-weight: normal;
+    font-family: $BebasNeue;
+    display: inline-block;
+    padding: 10px 0;
+  }
+}
+.img-contacts{
+  width: 50%;
+  padding: 67px 0 0;
+  img{
+    width: 100%;
+  }
+}
+
+
+.documentation{
+  background: url('../pic/design/documentation-bg.jpg') 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 948px;
+  h2{
+    color: #f6efe0;
+  }
+}
+
+.docum-fail{
+  padding: 20px 0;
+  li{
+    vertical-align: middle;
+    margin: 22px 0;
+    i{
+      vertical-align: middle;
+      margin-right: 17px;
+    }
+    a{
+      vertical-align: middle;
+      display: inline-block;
+      color: #f8f5f1;
+      font-family: $HelvetNeueBdCond;
+      text-decoration: none;
+      border-bottom: 1px dotted #f8f5f1;
+      font-size: rem(20);
+      font-weight: normal;
+      &:hover{
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
 
 
 

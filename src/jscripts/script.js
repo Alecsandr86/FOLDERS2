@@ -208,6 +208,16 @@ $(document).ready(function(){
 
     });
 
+    $('.mort-acord .item.active').find('.content').slideDown();
+    
+    $('.mort-acord .item').bind('click', function () {
+        if(!$(this).hasClass('active')){
+            $('.mort-acord .item').removeClass('active').find('.content').slideUp(700);
+            $(this).addClass('active').find('.content').slideDown(700);   
+        }
+        
+    });
+
     // \Акордион\
     $(function(){
         $(window).load(function() {
