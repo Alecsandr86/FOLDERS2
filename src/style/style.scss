@@ -444,7 +444,6 @@ button {
 }
 
 
-
 .location-box{
   background: #ede5db url('../pic/design/location-box-bg.png') 0 0 no-repeat;
   min-height: 390px;
@@ -1290,6 +1289,9 @@ header{
 .geo-map{
   width: 100%;
   margin-top: 26px;
+  img{
+    width: 100%;
+  }
 }
 
 .but-blic{
@@ -1464,8 +1466,54 @@ header{
 }
 
 
+.netting{
+  background: url('../pic/design/netting-bg.jpg') 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 950px;
+  .titles{
+    width: 100%;
+    font-size: rem(20);
+    padding: 26px 0 15px;
+    margin: 0;
+  }
+  .h4{
+    color: #e3d9c2;
+    font-size: rem(40);
+    line-height: 40px;
+    padding: 0 0 20px;
+  }
+}
 
 
+.netting-content{
+  padding: 34px 5px;
+  .item{
+    width: 60%;
+    padding: 0 0 39px;
+    i{
+      margin-top: 3px;
+    }
+    .content{
+      padding: 0 0 0 66px;
+      color: #f8f5f1;
+      span{
+        text-transform: uppercase;
+        font-size: rem(26);
+      }
+      strong{
+        text-transform: uppercase;
+        display: block;
+        color: #c2b19c;
+        font-size: rem(32);
+        font-family: $HelvetNeueBdCond;
+      }
+      p{
+        font-size: rem(20);
+      }
+    }
+  }
+}
 
 
 
