@@ -2,6 +2,9 @@
 window.log = function(param){
     console.log(param);
 };
+
+
+
 $(document).ready(function(){
 
     //Chrome Smooth Scroll
@@ -13,6 +16,7 @@ $(document).ready(function(){
     } catch(err) {
 
     };
+
     
     $(".hamburger").bind("click", function () {
         $(".hamburger").toggleClass("is-active");
@@ -142,11 +146,20 @@ $(document).ready(function(){
 
 
 
-    $('.slider-spaces').bxSlider({
-        pagerCustom: '#slider-spaces-pager',
-        mode: 'vertical',
-        adaptiveHeight: true,
-        controls:false
+    // $('.slider-spaces').bxSlider({
+    //     pagerCustom: '#slider-spaces-pager',
+    //     mode: 'vertical',
+    //     adaptiveHeight: true,
+    //     controls:false
+    // });
+
+    $('.po-slider').bxSlider({
+        pagerCustom: '#po-pager',
+        nextText:"<i class='slid-next-po'></i>",
+        prevText:"<i class='slid-prev-po'></i>",
+        // mode: 'vertical',
+        // adaptiveHeight: true,
+        // controls:false
     });
 
     // \Слайдеры \
@@ -196,14 +209,21 @@ $(document).ready(function(){
     
     // \RangeSlider\
     
+
     
     // Акордион
     $(function() {
 
-        $('.acordion').on('click', '.item:not(.active)', function() {
-            $(this)
-                .addClass('active').siblings().removeClass('active')
-                .closest('.acordion').find('.content-item').slideUp().removeClass('active').eq($(this).index()).slideDown();
+        $('.acordion').on('click', '.item', function() {
+            if($(this).hasClass('active')){
+                $(this).removeClass("active").find('.content-item').slideUp();
+            }
+            else{
+                $(this)
+                    .addClass('active').siblings().removeClass('active')
+                    .closest('.acordion').find('.content-item').slideUp().removeClass('active').eq($(this).index()).slideDown();  
+            }
+           
         });
 
     });
@@ -250,13 +270,13 @@ $(document).ready(function(){
             offset: -120
         });
 
-    $('.table-head')
+    $('.header-table')
         .waypoint(function(direction) {
             if (direction === 'down') {
-                $('.table-head').addClass('table-fix')
+                $('.header-table').addClass('table-fix')
             }
             else {
-                $('.table-head').removeClass('table-fix')
+                $('.header-table').removeClass('table-fix')
             }
         }, {
             offset: 58
@@ -303,8 +323,153 @@ $(document).ready(function(){
         });
     
     // \скрол\
+
+
+    // сортировка
+       
+    //$("#myTable").tablesorter();
+        $(function(){
+            $(".table-cast").tablesorter({
+                widgets        : ['zebra', 'columns'],
+                usNumberFormat : false,
+                sortReset      : true,
+                sortRestart    : true
+            });
+        });
+    // сортировка
+
+
+    $('ul.tab-caption').on('click', 'li:not(.active)', function() {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('div.tabs').find('.tab-content li').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+    $('.tab-content').find('li').each(function() {
+        var $parent = $(this);
+        $parent.find('svg').panzoom({
+            contain: 'invert',
+            increment: 1,
+            maxScale: 10,
+            minScale: 1,
+            $zoomIn: $parent.find(".zoom-in"),
+            $zoomOut: $parent.find(".zoom-out"),
+        });
+    });
+
+    // fancybox
+  
+    $(".link-popap").fancybox({
+        helpers : {
+            overlay: {
+                locked: false
+            }
+        },
+    });
+
+    $(".link-popap-map").fancybox({
+        helpers : {
+            title: {
+                type: 'inside',
+                position: 'top'
+            },
+            overlay: {
+                locked: false
+            }
+        },
+    });
+
+
+
+    $(".fancybox").fancybox({
+        wrapCSS:"wrappVideo",
+        nextEffect  : 'fade',
+        prevEffect  : 'fade',
+        padding     : 0,
+        margin      : [15, 15, 40, 15],
+        maxWidth: '640px',
+        maxHeight:"360px",
+        helpers : {
+            title: {
+                type: 'inside',
+                position: 'top'
+            },
+            overlay: {
+                locked: false
+            }
+        },
+        afterLoad   : addLinks,
+        beforeClose : removeLinks
+       
+    });
+    
+    function addLinks() {
+        var list = $("#links");
+        if (!list.length) {
+            list = $('<ul id="links">');
+
+            for (var i = 0; i < this.group.length; i++) {
+                $('<li data-index="' + i + '"><a href="#"> Видео ' + (i+1) + '</a></li>').click(function() { $.fancybox.jumpto( $(this).data('index'));}).appendTo( list );
+            }
+
+            list.appendTo( 'body' );
+        }
+
+        list.find('li').removeClass('active').eq( this.index ).addClass('active');
+    }
+
+    function removeLinks() {
+        $("#links").remove();
+    }
+
+
+    $(".fancybox-camera").fancybox({
+        wrapCSS:"wrappVideo",
+        nextEffect  : 'fade',
+        prevEffect  : 'fade',
+        padding     : 0,
+        margin      : [15, 15, 40, 15],
+        maxWidth: '607px',
+        maxHeight:"448px",
+        helpers : {
+            title: {
+                type: 'inside',
+                position: 'top'
+            },
+            overlay: {
+                locked: false
+            }
+        },
+        afterLoad   : addLinks1,
+        beforeClose : removeLinks1
+
+    });
+
+    function addLinks1() {
+        var list = $("#links");
+        if (!list.length) {
+            list = $('<ul id="links">');
+
+            for (var i = 0; i < this.group.length; i++) {
+                $('<li data-index="' + i + '"><a href="#"> камера ' + (i+1) + '</a></li>').click(function() { $.fancybox.jumpto( $(this).data('index'));}).appendTo( list );
+            }
+
+            list.appendTo( 'body' );
+        }
+
+        list.find('li').removeClass('active').eq( this.index ).addClass('active');
+    }
+
+    function removeLinks1() {
+        $("#links").remove();
+    }
     
     
+    
+    
+    
+    // \fancybox\
+
 });
 
 

@@ -221,6 +221,7 @@ button {
     color: #ac9576;
     line-height: 22px;
     text-transform: uppercase;
+    display: block;
   }
   h2{
     padding: 25px 0 7px;
@@ -678,6 +679,7 @@ button {
   
   .hamburger{
     display: inline-block;
+    padding: 15px 0 15px 15px;
    
   }
   .mess{
@@ -686,7 +688,7 @@ button {
 }
 .nav-fix{
   display: inline-block;
-  padding: 5px 0 0;
+  padding: 5px 43px 0 0;
   
   li{
     display: inline-block;
@@ -697,7 +699,7 @@ button {
     text-transform: uppercase;
     color: #504d5e;
     text-decoration: none;
-    padding: 0 7px;
+    padding: 0 4px;
     font-size: rem(20);
   }
 }
@@ -856,10 +858,121 @@ header{
 }
 
 .apar-box{
+  min-height: 500px;
   img{
-    width: 100%;
+    //width: 100%;
+  }
+  .corp-select{
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 90%;
+    overflow: hidden;
+    svg {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    path{
+      opacity: 0;
+      &:hover {
+        opacity: 0.2;
+      }
+     
+    }
+  } 
+}
+
+
+
+.tabs {
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: 24px;
+  position: relative;
+  max-width: none;
+  background-color: #822649;
+  &.white-bg {
+    background: white;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &.tab-caption {
+      position: absolute;
+      z-index: 5;
+      top: 33px;
+      left: 0;
+      li {
+        cursor: pointer;
+        font-family: $BebasNeue;
+        font-size: rem(33);
+        line-height: 1;
+        text-align: center;
+        &.active {
+          
+        }
+        
+        span {
+          line-height: .6;
+          display: block;
+          font-size: rem(20);
+        }
+      }
+    }
+    &.tab-content {
+      li {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
   }
 }
+
+
+.scheme_block {
+  position: relative;
+  overflow: hidden;
+  padding-top: 77%;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  svg path:hover,
+  svg polygon:hover,
+  svg polyline:hover,
+  svg path:active,
+  svg polygon:active,
+  svg polyline:active,
+  svg path:focus,
+  svg polygon:focus,
+  svg polyline:focus,
+  svg path[data-active="true"],
+  svg polygon[data-active="true"],
+  svg polyline[data-active="true"] {
+    cursor: pointer;
+    fill: rgba(255, 255, 255, 0.7);
+    opacity: .8;
+    stroke: rgba(255, 255, 255, .3);
+  }
+}
+
+
+
+
+
 
 .wrapper-min{
   max-width: 665px;
@@ -1003,18 +1116,18 @@ header{
     }
   }
   .table-head{
-    &.table-fix{
-      position: fixed;
-      top: 58px;
-      left: 0;
-      width: 100%;
-    }
+    
   }
   .header-table{
     height: 130px;
     max-width: 665px;
     margin: 0 auto;
-    
+    &.table-fix{
+      position: fixed;
+      top: 58px;
+      //left: 0;
+      width: 100%;
+    }
     tr{
       background-color: #6b1838!important;
     }
@@ -1025,6 +1138,7 @@ header{
       width: 84px;
       padding: 114px 0 5px;
       border-right: 1px solid #e9dfd2;
+      outline: none!important;
       span{
         display: inline-block;
         text-transform: uppercase;
@@ -1061,7 +1175,7 @@ header{
 .parking-spaces-box{
   position: relative;
   margin: 20px 0 20px;
-  height: 700px;
+  //height: 700px;
 }
 .slidbutt{
   text-decoration: none;
@@ -1088,27 +1202,29 @@ header{
 
 .zumm{
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  width: 23%;
   z-index: 99;
   text-align: right;
   padding: 25px 2px;
-  a{
+  button{
     display: inline-block;
     margin: 0 10px;
+    border: none;
+    background-color: transparent;
   }
 }
 
 
 
 .participants{
-  background: url('../pic/design/participants-bg.jpg') 0 0 no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  min-height: 950px;
+  background: url('../pic/design/participants-bg.jpg') 50% 0 no-repeat;
+  //-webkit-background-size: cover;
+  //background-size: cover;
+  min-height: 948px;
   overflow: hidden;
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
 }
 
 
@@ -1116,7 +1232,7 @@ header{
 
 .acordion{
   .item{
-    margin: 24px 0;
+    margin: 22px 0;
     background-color: lighten(#f4eddc, 5%);
     &.active{
       .but-acord{
@@ -1289,6 +1405,17 @@ header{
 .geo-map{
   width: 100%;
   margin-top: 26px;
+  position: relative;
+  .map-pl-1{
+    position: absolute;
+    top: 44%;
+    left: 15%;
+  }
+  .map-pl-2{
+    position: absolute;
+    top: 19%;
+    left: 58%;
+  }
   img{
     width: 100%;
   }
@@ -1302,12 +1429,13 @@ header{
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  padding: 13px 13px 0;
+  padding: 12px 13px 0;
   text-transform: uppercase;
   text-decoration: none;
   background-color: #dacdad;
   height: 44px;
   overflow: hidden;
+  z-index: 1;
   span{
     position: relative;
     z-index: 2;
@@ -1358,7 +1486,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 540px;
+    padding: 0 0 28px;
     background-color: rgba(98, 19, 49,0.8);
     color: #FFFFFF; 
     .h2{
@@ -1403,7 +1531,7 @@ header{
   }
   p{
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 35px 10px 0;
   }
   ul{
     padding: 0 0 20px;
@@ -1455,11 +1583,23 @@ header{
       color: #f8f5f1;
       font-family: $HelvetNeueBdCond;
       text-decoration: none;
-      border-bottom: 1px dotted #f8f5f1;
       font-size: rem(20);
       font-weight: normal;
+      position: relative;
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+        background: url('../pic/design/bdb-doted.png') 0 0 repeat-x;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
       &:hover{
-        border-bottom-color: transparent;
+        &:after{
+          opacity: 0;
+        }
       }
     }
   }
@@ -1514,6 +1654,210 @@ header{
     }
   }
 }
+
+.fancybox-overlay{
+  background: #611130 url('../pic/design/popap-bg.png') 0 100% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.fancybox-skin{
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.fancybox-opened {
+  .fancybox-skin{
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.wr-popap{
+  display: none;
+
+}
+
+
+.clok{
+  display: inline-block;
+  position: fixed;
+  top: 13px;
+  right: 13px;
+}
+
+.form-popap {
+  background-color: #611130;  
+  max-width: 350px;
+  margin: 0 auto;
+  h3{
+    color: #ffffff;
+    font-size: rem(64);
+    font-family: $BebasNeue;
+    font-weight: normal;
+  }
+
+}
+
+
+.form-popap-castum{
+  padding: 20px 0 0;
+  label{
+    display: block;
+    border-bottom: 1px solid #fbd2bf;
+    color: #e9dfd2;
+    font-size: rem(26);
+    text-transform: uppercase;
+    margin: 10px 0 38px;
+    padding: 0 0 7px;
+    input{
+      border: none;
+      background-color: transparent;
+      &:focus{
+        outline: none;
+      }
+    }
+    textarea{
+      display: block;
+      width: 100%;
+      min-height: 100px;
+      background-color: transparent;
+      border: none;
+      resize: none;
+      &:focus{
+        outline: none;
+      }
+    }
+    sup{
+      color: #ff0000;
+    }
+  }
+  .but-blic{
+    padding: 4px 23px 0;
+    font-size: rem(30);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fancybox-title{
+  color: #ffffff;
+  font-size: rem(64);
+  font-family: $BebasNeue;
+  font-weight: normal;
+  padding: 0 0 8px 10%;
+  line-height: 50px;
+}
+
+.fancybox-close{
+  background-image: url(../pic/design/sprite.png);
+  background-position: 0px -399px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 13px;
+  right: 13px;
+}
+
+.fancybox-nav{
+  top: 50%;
+  margin-top: -32.5px;
+}
+.fancybox-prev{
+  background-image: url(../pic/design/sprite.png);
+  background-position: 0px -1659px;
+  width: 35px;
+  height: 65px;
+  left: -60px;
+}
+.fancybox-next{
+  background-image: url(../pic/design/sprite.png);
+  background-position: 0px -1480px;
+  width: 35px;
+  height: 65px;
+  right: -60px;
+}
+
+
+
+// пример
+
+#links {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  padding-top: 10px;
+  list-style: none;
+  text-align: center;
+  z-index: 99999;
+}
+
+#links li {
+  display: inline-block;
+  border-right: 1px dotted #fff;
+  padding: 15px;
+  &:last-child{
+    border-right-color: transparent;
+  }
+  &.active a{
+    &:after{
+      opacity: 1;
+    }
+  }
+  
+  
+}
+
+#links li a{
+  cursor: pointer;
+  color: #ffffff;
+  font-size: rem(26);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  
+  &:after{
+    opacity: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../pic/design/line-bord-bot.png') 0 0 repeat-x;
+    width: 100%;
+    height: 1px;
+  }
+  
+  
+  
+}
+
+#links li.active a {
+  //background-color: white;
+}
+
+// пример
+
+
+
+
+
+
 
 
 
