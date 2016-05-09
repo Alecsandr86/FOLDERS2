@@ -463,8 +463,22 @@ $(document).ready(function(){
     function removeLinks1() {
         $("#links").remove();
     }
+
     
-    
+   
+    $(".but-zoom").fancybox({
+        wrapCSS:"galegeBottomTitle",
+        helpers		: {
+            title	: { 
+                type : 'inside' ,
+                position: 'buttom'
+            },
+            overlay: {
+                locked: false
+            }
+        }
+    });
+  
     
     
     
