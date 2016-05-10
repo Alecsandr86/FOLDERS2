@@ -981,6 +981,7 @@ header{
 
 
 .selection-parameters{
+  position : relative;
   background: #e9dfd2 url('../pic/design/selec-param.png') 0 0 no-repeat;
   h4{
    
@@ -2135,7 +2136,208 @@ header{
 
 
 
+.pages-404{
+  text-align : center;
+  color : #fff;
+  min-height: 948px;
+  background :url('../pic/design/bg-404.jpg') 0 0 no-repeat;
+  -webkit-background-size : cover;
+  background-size         : cover;
+  padding : 74px 0;
+  h1{
+    color : #fbf7ee;
+    font-size : rem(620);
+    font-family : $BebasNeue;
+    font-weight : normal;
+  }
+  p{
+    font-size : rem(20);
+    margin : - 54px 0 20px;
+  }
+  .but-blic{
+    padding: 12px 40px 0;
+  }
+}
 
+
+.table-wrapper-two{
+  max-width : 75%;
+  margin : 0 auto;
+  padding : 13px 0 0;
+}
+.one-table{
+  width : 45%;
+  span{
+    color : #3f3c48;
+    font-size : rem(20);
+    display : inline-block;
+    padding : 10px 0;
+  }
+  &:nth-child(2n+2){
+    //
+    width : 52%;
+  }
+  table{
+    width : 100%;
+    background-color :  #e9dfd2;
+    border-top : 1px solid #a58760;
+    border-left : 1px solid #a58760;
+    tr{
+      text-align : center;
+      font-size : rem(24);
+    }
+    td{
+      border-right : 1px solid #a58760;
+      border-bottom : 1px solid #a58760;
+      color : #fff;
+      height : 26px;
+      width : 36px;
+    }
+    tfoot{
+      td{
+        border-top : 2px solid #a58760;
+        background-color : #fff;
+      }
+     
+    }
+  }
+}
+.col-white{
+  background-color : #fff;
+}
+.col-pur-1{
+  background-color : #a9446a;
+}
+
+.col-pur-2{
+  background-color : #822649;
+}
+.col-pur-3{
+  background-color : #6b1838;
+}
+
+
+
+
+.bg-tables{
+  background-color :  #d8c9b4;
+}
+
+
+.title-list{
+  padding : 3px 0 23px;
+  li{
+    display : inline-block;
+    color : #2b2839;
+    font-size : rem(20);
+    border-right :  1px solid #2b2839;
+    padding : 0 12px 0 5px;
+    &:last-child{
+      border : none; 
+    }
+    &:first-child{
+      padding-left : 0;
+    }
+  }
+}
+
+.corp-img{
+  padding : 0 0 26px;
+  img{
+    
+  }
+}
+
+
+.corp-plan-cont{
+  .item{
+    width : 50%;
+    padding: 0 0 32px;
+    strong{
+      font-size : rem(32);
+      font-family : $BebasNeue;
+      color : #978266;
+      font-weight : normal;
+      span{
+        display : block;
+        color : #6b1838;
+        line-height: 41px;
+      }
+    }
+    .but-blic{
+      padding: 12px 20px 0;
+    }
+  }
+}
+
+.list-cast{
+  padding : 10px 0 22px;
+  li{
+    background : url('../pic/design/list-castum.png') 0 50% no-repeat;
+    padding : 0 0 0 25px;
+    font-size : rem(20);
+  }
+}
+
+.cost_of{
+  display : inline-block;
+  background-color : #822649;
+  color : #fff;
+  font-size : rem(20);
+  padding: 4px 9px;
+  margin-bottom : 10px;
+}
+.big-cost{
+  color: #8f785a;
+  font-family: $BebasNeue;
+  font-size: rem(38);
+  text-transform: uppercase;
+  margin-bottom : 27px;
+  display : inline-block;
+  .rub{
+    color: #8f785a;
+    &:before{
+      background-color : #8f785a;
+    }
+  }
+}
+
+
+
+.pdf-two{
+  display : inline-block;
+}
+
+.share{
+  color : #2b2839;
+  font-size : rem(20);
+  padding : 40px 0 18px;
+  input{
+    margin-top : 8px;
+    display : block;
+    width: 271px;
+    padding : 8px;
+    font-size : rem(16);
+    border : none;
+    border-top : 1px solid #4f194e;
+    border-left : 1px solid #4f194e;
+    background-color :  #fff;
+    color : #20031f;
+    &:focus{
+      outline : none;
+    }
+  }
+}
+
+.soz-w{
+  li{
+    display : inline-block;
+    padding : 0 2px 0 0;
+  }
+  a{
+    display : inline-block;
+  }
+}
 
 
 
